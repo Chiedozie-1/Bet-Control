@@ -1,0 +1,341 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Make the mobile header sticky */
+@media (max-width: 992px) { /* Targeting mobile and tablet screens */
+    .mobile-header {
+        position: sticky;
+        top: 0;
+        z-index: 1050; /* Ensure it stays above other elements */
+        background-color: #fff; /* background color to prevent transparency */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+}
+
+#head{
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #1A3B5D;
+    text-transform: uppercase;
+}
+
+#bullet{
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: -1px;
+    margin-top: 2%;
+}
+
+/* Offcanvas Styling */
+.offcanvas {
+    background-color: #1A3B5D;
+    color: white; 
+    padding: 20px;
+    z-index: 1050; 
+}
+.offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+.offcanvas-title img {
+    max-width: 150px; /* Adjust logo size */
+}
+.offcanvas-body ul {
+    padding: 0;
+    margin: 0;
+}
+.offcanvas-body ul li {
+    margin-bottom: 15px; /* Add spacing between links */
+}
+.offcanvas-body ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+.offcanvas-body ul li a:hover {
+   opacity: 0.5;
+}
+#offcanvas-icon i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#offcanvas-icon i:hover {
+    opacity: 0.5; 
+} 
+/* offcanvas ends */
+
+/* header starts */
+nav a{
+    text-decoration: none;
+    color: #1A3B5D;
+    font-size:1em;
+    font-family: 'Poppins',sans-serif;
+    padding:1em 1.5em;
+    gap: 10px;
+}
+@media (max-width: 1200px) {
+    nav a{
+        padding:1em 0.9em;
+    }
+}
+@media (max-width: 1071px) {
+    nav a{
+        padding:1em 0.5em;
+    }
+}
+nav a:hover{
+    background-color: #1A3B5D;
+    color: #ffff;
+    border-radius: 5px;
+    transition: background-color 0.2s ease; 
+}
+#button{
+    width: 160px;
+    height: 50px;
+    background-color: #ffff;
+    font-weight: bold;
+    color: #1A3B5D;
+    border: 2px solid #1A3B5D;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+#button:hover{
+    background-color: #1A3B5D;
+    color: #ffff;
+    transition: background-color 0.2s ease; 
+}
+
+/* header ends */
+
+/* hero starts */
+#text-1{
+    font-weight: 500;
+    font-size: 50px;
+}
+#gambling{
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 0px;
+    color: #1A3B5D;
+}
+#text-2{
+    font-weight: 400;
+    font-size: 20px;
+    color: #878787;
+}
+.cta-button{
+    width: 194px;
+    height: 60px;
+    align-items: center;
+    background-color: #1A3B5D;
+    border: 1px solid #1A3B5D;
+    color: #ffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px #1A3B5D26;
+    cursor: pointer;
+}
+.cta-button:hover {
+    background-color: #0F2A45; 
+    transition: background-color 0.3s ease; 
+}
+#ellipse{
+    display:flex;
+    gap: -30%;
+}
+#rate{
+    font-family: 'inter', sans-serif;
+    font-weight:bolder;
+    font-size: 25px;
+}
+#rate-tag{
+    color: #878787;
+    font-size: 16px;
+    font-weight: normal;
+}
+.vertical-line {
+    width: 2px; /* Thickness of the line */
+    height: 50px; /* Height of the line */
+    background-color: #1A3B5D; /* Dark blue color */
+    margin: 0 auto; /* Center the line */
+}
+/* hero ends */
+
+/* features starts */
+#content{
+    color: #878787;
+}
+#list:hover{
+    transform: scale(1.05);
+    font-size: larger;
+    font-weight: bold;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#content:hover{
+    color: #0F2A45;
+    transition:0.3s ease;
+    cursor: pointer;
+}
+/* features end */
+
+/*how it works starts */
+#flexbox-1:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#flexbox-2:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#flexbox-3:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.point{
+    font-weight: 900;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+#point{
+    color: #1A3B5D;
+}
+.watermark {
+    position: absolute;
+    top: 1px;
+    bottom: 10px; 
+    right: 10px; 
+    font-size: 170px; 
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.1); 
+    pointer-events: none; 
+    z-index: 1; 
+}
+/* how it works ends */
+
+/* testimonials starts */
+#testimonial{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 28px;
+}
+#name{
+    font-weight: 600;
+    font-size: 25px;
+    color: #1A3B5D;
+}
+/* testimonials ends */
+
+/* faq starts */
+#faq-1{
+    border-radius: 10px;
+    padding: 50px 40px;
+    background-color: #1A3B5D;
+    color: #ffff;
+}
+#faq-1:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#faq-2{
+    border-radius: 10px;
+    padding: 50px 40px;
+    background-color:#ffff;
+    color: black;
+}
+#faq-2:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#faq-bullet{
+    font-weight: 600;
+    font-size: 28px;   
+}
+#faq-point{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    margin-top: 5%;
+    padding-top: 5%;
+}
+/* faq ends */
+
+/* download starts */
+.download{
+    border-radius: 8px;
+    /* height: ; */
+    width: 100%;
+    background-color: #1A3B5D; 
+    color: #ffff;
+}
+#download-point{
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: capitalize; 
+}
+.download-button{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #1A3B5D;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: solid white;
+    background-color: white;
+    cursor: pointer;
+}
+.download-button:hover{
+    background-color: #1A3B5D;
+    color: #ffff;
+    transition: background-color 0.2s ease; 
+}
+/* download ends */
+
+/* footer starts */
+#footer-icon{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    gap: 25px;
+}
+#footer-icon i:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.footer-links:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.footer-cta-button{
+    width: 194px;
+    height: 60px;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #1A3B5D;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px #1A3B5D26;
+    cursor: pointer;
+}
+.footer-cta-button:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+}
+/* footer ends */
