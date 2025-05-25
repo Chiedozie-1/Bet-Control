@@ -46,14 +46,34 @@
                         <li><a href="#Testimonials" class="nav-link text-white">Testimonials</a></li>
                         <li><a href="#FAQ" class="nav-link text-white">FAQ</a></li>
                         <li>
-                            <button id="button" class="btn btn-light w-100 mt-3" onclick="window.open('https://forms.gle/BcaVoH32qZJ2FyH5A','_blank')">
+                            <button id="button" class="btn btn-light w-100 mt-3 ms-2" onclick="window.open('https://forms.gle/BcaVoH32qZJ2FyH5A','_blank')">
                                 Sign Up
                             </button>
                             <div >
-                                <!-- Button trigger modal -->
-                                <button type="button" class="w-100 my-3" id="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Download App
-                                </button>
+                               <div class="d-flex gap-1 mt-2">
+                                    <div class="">
+                                        <button class="cta-button-offcanvas"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <div class="d-flex gap-3 align-items-center justify-content-center">
+                                                <div><i class="fab fa-apple fs-2"></i></div>
+                                                <div class="text-center d-flex flex-column">
+                                                    <span style="font-weight: lighter; font-size: x-small; ">Download on </span>
+                                                    <span class="">App Store</span>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="">
+                                    <button class="cta-button-offcanvas"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <div class="d-flex gap-3 align-items-center justify-content-center">
+                                                <div><i class="fab fa-google-play fs-3"></i></div>
+                                                <div class="text-center d-flex flex-column">
+                                                    <span style="font-weight: lighter; font-size: x-small; ">Download on </span>
+                                                    <span class="">Play Store</span>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -107,10 +127,34 @@
                     <p id="text-1">Take Control Of Your <br> <span id="gambling">Gambling</span> Habits</p>
                     <!-- <p id="Vector"><img src="../IMG/Vector 2.svg" alt="" ></p> -->
                     <p id="text-2">Track your wins, set budgets and make smarter <br> decisions with BetControl</p>
-                    <button class="mt-5 cta-button" onclick="window.open('https://forms.gle/BcaVoH32qZJ2FyH5A','_blank')">Get Started</button>
+                    <div class="d-flex gap-3">
+                        <div class="">
+                            <button class="mt-5 cta-button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="d-flex gap-3 align-items-center justify-content-center">
+                                    <div><i class="fab fa-apple fs-2"></i></div>
+                                    <div class="text-center d-flex flex-column">
+                                        <span style="font-weight: lighter; font-size: x-small; ">Download on </span>
+                                        <span class="">App Store</span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="">
+                           <button class="mt-5 cta-button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="d-flex gap-3 align-items-center justify-content-center">
+                                    <div><i class="fab fa-google-play fs-3"></i></div>
+                                    <div class="text-center d-flex flex-column">
+                                        <span style="font-weight: lighter; font-size: x-small; ">Download on </span>
+                                        <span class="">Play Store</span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
                     <div class="row mt-5 pe-5">
                         <div class="col-lg-3 col-md-12 col-sm-12">
-                                <img src="assets\IMG\ellipse.svg" alt="image not found" class="img-fluid">
+                            <img src="assets\IMG\ellipse.svg" alt="image not found" class="img-fluid">
                         </div>
                         <div class="col-lg-9 col-md-12 col-sm-12 align-items-center">
                             <div class="row " style="gap: -50px;">
@@ -138,19 +182,31 @@
             <div class="row">
                     <p class="d-flex justify-content-center" id="head">Features</p>
                 <div class="row">
-                    <div class="col-12 col-md-5 col-lg-6 pt-1 mt-sm-3 mt-md-5 mt-lg-5">
+                    <div class="col-12 col-md-12 col-lg-4 pt-5 mt-sm-3 mt-md-5 mt-lg-5 d-flex justify-content-center align-items-center">
                         <img src="assets\IMG\Budget Clac.svg" alt="image not found" class="img-fluid">
                     </div>
                 
-                    <div class="col-12 col-md-7 col-lg-6 my-3 pt-5 mt-sm-0 mt-md-0 mt-lg-3">
-                        <p id="bullet">Why BetControl Works</p> 
+                    <div class="col-12 col-md-12 col-lg-8 my-3 ">
+                        <p id="bullet" class="d-flex justify-content-center align-items-center">Why BetControl Works</p> 
                         <div class="d-none d-md-none d-lg-block">
-                            <p id="list"> <img src="assets\IMG\Question.svg" alt="" class="features-icon"> Self-Assessment</p>
-                            <p id="content">Answer a few quick questions to evaluate your gambling habits. <br> Get personalized insights to help you make smarter decisions. </p>
-                            <p id="list"> <img src="assets\IMG\Calculator.svg" alt="" class="features-icon"> Budget Calculator</p>
-                            <p id="content">Set a betting budget that worsks for you. Track your <br> spending and stay in control with smart budgetting tools. </p>
-                            <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Report Card</p>
-                            <p id="content">See a clear breakdown of your gambling trends over time. <br> Get fun, motivational feedback based on your performance. </p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p id="list"> <img src="assets\IMG\Question.svg" alt="" class="features-icon"> Self-assessment</p>
+                                    <p id="content">Interactive quizzes help users evaluate their gambling habits and risk level. </p>
+                                    <p id="list"> <img src="assets\IMG\Calculator.svg" alt="" class="features-icon">Budget calculators & spending trackers</p>
+                                    <p id="content">Simple tools to set betting limits, track losses and wins, and monitor monthly gambling spend.</p>
+                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Personalized report cards</p>
+                                    <p id="content">Visual summaries showing betting patterns, win/loss ratios, and behavioral trends over time. </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p id="list"> <img src="assets\IMG\Question.svg" alt="" class="features-icon"> Site & app blocking (self-exclusion)</p>
+                                    <p id="content"> Temporarily or permanently restricts access to all gambling platforms across devices.</p>
+                                    <p id="list"> <img src="assets\IMG\Calculator.svg" alt="" class="features-icon">Community support forums</p>
+                                    <p id="content">Safe online spaces to share experiences, get advice, and connect with others facing similar challenges. </p>
+                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Tele-therapy sessions</p>
+                                    <p id="content">On-demand or scheduled sessions with licensed therapists trained in gambling addiction support.</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="accordion d-block d-md-block d-lg-none" id="accordionExample">
                             <div class="accordion-item">
@@ -186,6 +242,42 @@
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <p id="content">See a clear breakdown of your gambling trends over time. <br> Get fun, motivational feedback based on your performance. </p>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Site & app blocking</p>
+                                </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p id="content"> Temporarily or permanently restricts access to all gambling platforms across devices. </p>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Community support forums</p>
+                                </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p id="content">Safe online spaces to share experiences, get advice, and connect with others facing similar challenges. </p>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon">Tele-therapy sessions</p>
+                                </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p id="content">On-demand or scheduled sessions with licensed therapists trained in gambling addiction support. </p>
                                 </div>
                                 </div>
                             </div>
@@ -297,7 +389,7 @@
                     </div>
 
                     <div class="col-12 col-md-12 col-lg-6 d-flex flex-column gap-5 gx-5">
-                        <div class="card mt-sm-5 mt-md-5 mt-lg-0 " id="faq-2">
+                        <div class="card mt-5 mt-md-5 mt-lg-0 " id="faq-2">
                             <p id="faq-bullet">Does BetControl work with all <br> betting platforms?</p>
                             <p id="faq-point">Yes! You can manually log your bets, no matter <br> where you place them.</p>
                         </div>
@@ -417,8 +509,8 @@
 
             <div class="footer-2">
                 <div class="container">
-                    <div class="my-5 text-center mx-auto">
-                        <p >© Copyright  <a href="index.html" class="text-white footer-links">Bet-Control</a> 2025, All rights reserved.</p>
+                    <div class="my-5 pt-5 text-center mx-auto">
+                        <p >© Copyright  <a href="index.html" class="text-white footer-links">BetControl Technologies Ltd.</a> 2025, All rights reserved.</p>
                     </div>
                 </div>
             </div>
