@@ -72,6 +72,29 @@ html {
 #offcanvas-icon i:hover {
     opacity: 0.5; 
 } 
+.sign-up-button-offcanvas{
+    width: 194px;
+    height: 60px;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #1A3B5D;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px #1A3B5D26;
+    cursor: pointer;
+}
+@media (max-width: 800px) {
+    .sign-up-button-offcanvas{
+        width: 304px;
+        height: 60px;
+    }
+}
+.sign-up-button-offcanvas:hover{
+    background-color: #1A3B5D; 
+    color: #ffff;
+    transition: background-color 0.3s ease; 
+}
+
 .cta-button-offcanvas{
     width: 194px;
     height: 60px;
@@ -85,7 +108,7 @@ html {
 }
 @media (max-width: 800px) {
     .cta-button-offcanvas{
-        width: 142px;
+        width: 150px;
         height: 60px;
     }
 }
