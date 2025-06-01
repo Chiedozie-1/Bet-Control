@@ -7,14 +7,53 @@
 html {
     scroll-behavior: smooth;
 }
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background: #0F2A45;
+    background: linear-gradient(90deg, rgba(15, 42, 69, 1) 27%, rgba(26, 59, 93, 1) 66%, rgba(26, 73, 120, 1) 100%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 30px #1A3B5D,
+                0 0 70px #1A3B5D,
+                0 0 110px #1A3B5D;
+    animation: colors 3s infinite alternate;
+}
+
+@keyframes colors {
+    0% {
+        background: #0F2A45;
+    }
+    50% {
+        background: #1A4978;
+    }
+    100% {
+        background: #1A3B5D;
+    }
+}
+
+.cursor:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #1A3B5D;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 /* Make the mobile header sticky */
-@media (max-width: 992px) { /* Targeting mobile and tablet screens */
+@media (max-width: 992px) { 
     .mobile-header {
         position: sticky;
         top: 0;
         z-index: 1050; /* Ensure it stays above other elements */
-        background-color: #fff; /* background color to prevent transparency */
+        background-color: #fff; 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     }
 }
@@ -41,17 +80,17 @@ html {
     z-index: 1050; 
 }
 .offcanvas-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 .offcanvas-title img {
-    max-width: 150px; /* Adjust logo size */
+    max-width: 150px; 
 }
 .offcanvas-body ul {
     padding: 0;
     margin: 0;
 }
 .offcanvas-body ul li {
-    margin-bottom: 15px; /* Add spacing between links */
+    margin-bottom: 15px; 
 }
 .offcanvas-body ul li a {
     font-size: 18px;
@@ -72,7 +111,7 @@ html {
 #offcanvas-icon i:hover {
     opacity: 0.5; 
 } 
-.sign-up-button-offcanvas{
+.create-account-btn-offcanvas{
     width: 194px;
     height: 60px;
     align-items: center;
@@ -84,12 +123,12 @@ html {
     cursor: pointer;
 }
 @media (max-width: 800px) {
-    .sign-up-button-offcanvas{
+    .create-account-btn-offcanvas{
         width: 304px;
         height: 60px;
     }
 }
-.sign-up-button-offcanvas:hover{
+.create-account-btn-offcanvas:hover{
     background-color: #1A3B5D; 
     color: #ffff;
     transition: background-color 0.3s ease; 
@@ -144,23 +183,23 @@ nav a:hover{
     border-radius: 5px;
     transition: background-color 0.2s ease; 
 }
-#button{
-    width: 140px;
+.create-account-btn{
+    width: 160px;
     height: 50px;
     background-color: #ffff;
     font-weight: bold;
+    font-size: smaller;
     color: #1A3B5D;
     border: 2px solid #1A3B5D;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
 }
-#button:hover{
+.create-account-btn:hover{
     background-color: #1A3B5D;
     color: #ffff;
     transition: background-color 0.2s ease; 
 }
-
 /* header ends */
 
 /* hero starts */
@@ -173,7 +212,10 @@ nav a:hover{
     font-size: 50px;
     letter-spacing: 0px;
     color: #1A3B5D;
+    position: relative;
+    display: inline-block;
 }
+
 #text-2{
     font-weight: 400;
     font-size: 20px;
@@ -215,10 +257,10 @@ nav a:hover{
     font-weight: normal;
 }
 .vertical-line {
-    width: 2px; /* Thickness of the line */
-    height: 50px; /* Height of the line */
-    background-color: #1A3B5D; /* Dark blue color */
-    margin: 0 auto; /* Center the line */
+    width: 2px; 
+    height: 50px; 
+    background-color: #1A3B5D; 
+    margin: 0 auto; 
 }
 /* hero ends */
 
@@ -293,7 +335,7 @@ nav a:hover{
 /* faq starts */
 #faq-1{
     border-radius: 10px;
-    padding: 50px 40px;
+    padding: 30px 20px;
     background-color: #1A3B5D;
     color: #ffff;
 }
@@ -304,7 +346,7 @@ nav a:hover{
 }
 #faq-2{
     border-radius: 10px;
-    padding: 50px 40px;
+    padding: 30px 20px;
     background-color:#ffff;
     color: black;
 }
@@ -320,7 +362,7 @@ nav a:hover{
 }
 #faq-point{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 5%;
 }
 .card{
@@ -331,7 +373,6 @@ nav a:hover{
 /* download starts */
 .download{
     border-radius: 8px;
-    /* height: ; */
     width: 100%;
     background-color: #1A3B5D; 
     color: #ffff;
@@ -391,3 +432,42 @@ nav a:hover{
     transition: 0.2s;
 }
 /* footer ends */
+ 
+
+/* Animation starts for Download button */
+
+button,
+button:focus {
+  transition: transform 0.2s cubic-bezier(.4,2,.3,1), box-shadow 0.2s cubic-bezier(.4,2,.3,1);
+  will-change: transform, box-shadow;
+}
+
+button:hover,
+button:active {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(26, 59, 93, 0.18), 0 2px 4px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+/* Animation for appear effect */
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.appear {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.appear.visible {
+  opacity: 1;
+  transform: scale(1);
+}

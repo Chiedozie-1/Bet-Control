@@ -18,6 +18,7 @@
 </head>
 
 <body>
+<div class="cursor d-none d-md-block d-lg-block"></div>
 
  <!-- Offcanvas for Mobile Navigation starts -->
 <section class="container overflow-hidden mobile-header">
@@ -46,8 +47,8 @@
                         <li><a href="#Testimonials" class="nav-link text-white">Testimonials</a></li>
                         <li><a href="#FAQ" class="nav-link text-white">FAQ</a></li>
                         <li>
-                            <button  class="sign-up-button-offcanvas mt-3 " onclick="window.open('https://forms.gle/BcaVoH32qZJ2FyH5A','_blank')">
-                                <span class="fw-bold">Sign Up</span>
+                            <button  class="create-account-btn-offcanvas mt-3" onclick="location.href='#'">
+                                <span class="fw-bold">Create An Account</span>
                             </button>
                             <div >
                                <div class="d-flex gap-1 mt-2">
@@ -78,7 +79,7 @@
                         </li>
                     </ul>
 
-                    <!-- Footer Icons -->
+                    <!-- Icons -->
                     <div class="mt-4">
                         <p class="fw-bold text-white">Follow Us:</p>
                         <div id="offcanvas-icon" class="d-flex gap-3">
@@ -106,8 +107,8 @@
                 <li class="nav-item"><a href="#Testimonials">Testimonials</a></li>
                 <li class="nav-item"><a href="#FAQ">FAQ</a></li>
                 <li class="button ms-auto me-">
-                    <button id="button" onclick="window.open('https://forms.gle/BcaVoH32qZJ2FyH5A','_blank')">
-                        Sign Up
+                    <button  class="create-account-btn" onclick="location.href='#'">
+                        Create An Account
                     </button>
                 </li>
             </ul>
@@ -121,15 +122,21 @@
     
         <!-- hero starts -->
     <section class="overflow-hidden">
-        <div class="container mt-lg-5 mt-md-3 md-1  pt-5" id="home">
+        <div class="container mt-lg-5 mt-md-3 mt-sm-0  pt-5" id="home">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-6 my-4">
-                    <p id="text-1">Take Control Of Your <br> <span id="gambling">Gambling</span> Habits</p>
-                    <!-- <p id="Vector"><img src="../IMG/Vector 2.svg" alt="" ></p> -->
-                    <p id="text-2">Track your wins, set budgets and make smarter <br> decisions with BetControl</p>
+                    <div class="appear position-relative d-inline-block" id="text-1" style="line-height:1.2;">
+                        Take Control Of Your <br>
+                        <span id="gambling" class="position-relative d-inline-block" style="z-index:1;">
+                            Gambling
+                            <img src="assets\IMG\Vector 2.svg" alt="" id="vector-under-gambling" class="img-fluid position-absolute" style="top: 50%; left: 0; width: 85%; height: 100%; z-index:-1;">
+                        </span>
+                        Habits
+                    </div>
+                    <p class="appear mt-lg-5 mt-md-3" id="text-2">Track your wins, set budgets and make smarter <br> decisions with BetControl</p>
                     <div class="d-flex gap-3">
-                        <div class="">
-                            <button class="mt-5 cta-button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="appear">
+                            <button class="mt-5 cta-button download-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <div class="d-flex gap-3 align-items-center justify-content-center">
                                     <div><i class="fab fa-apple fs-2"></i></div>
                                     <div class="text-center d-flex flex-column">
@@ -139,8 +146,8 @@
                                 </div>
                             </button>
                         </div>
-                        <div class="">
-                           <button class="mt-5 cta-button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="appear">
+                           <button class="mt-5 cta-button download-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <div class="d-flex gap-3 align-items-center justify-content-center">
                                     <div><i class="fab fa-google-play fs-3"></i></div>
                                     <div class="text-center d-flex flex-column">
@@ -153,22 +160,28 @@
                     </div>
 
                     <div class="row mt-5 pe-5">
-                        <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="col-lg-3 col-md-12 col-sm-12 appear">
                             <img src="assets\IMG\ellipse.svg" alt="image not found" class="img-fluid">
                         </div>
                         <div class="col-lg-9 col-md-12 col-sm-12 align-items-center">
                             <div class="row " style="gap: -50px;">
-                                <div class="col-4"> <p id="rate"> 5,000 <br><span id="rate-tag">Active Users</span></p></div>
+                                <div class="col-4 counters" id="rate">
+                                     <span data-count="5000" >0</span><br>
+                                     <span id="rate-tag">Active Users</span>
+                                </div>
                                 <div class="col-1 text-center my-3">
                                     <div class="vertical-line"></div>
                                 </div>
-                                <div class="col-5"> <p id="rate"> 4.7/5 <br><span id="rate-tag"> <img src="assets\IMG\5star.svg" alt="" class="img-fluid"> Rating</span></p></div>
+                                <div class="col-5 counters" id="rate">
+                                    <span data-count="4.7" > 0</span> /5 <br>
+                                    <span id="rate-tag"> <img src="assets\IMG\5star.svg" alt="" class="img-fluid"> Rating</span>
+                                </div>
                             </div>
                         </div>
                     </div> 
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 my-5 my-md-0 my-lg-0  d-flex justify-content-center align-items-center">
-                    <img src="assets\IMG\Betting Budget.svg" alt="image not found" id="image-1" class="img-fluid">
+                    <img src="assets\IMG\Betting Budget.svg" alt="image not found" id="image-1" class="img-fluid appear">
                 </div>
                 
             </div>
@@ -180,30 +193,30 @@
     <section class="overflow-hidden">
         <div  class="container my-5 pt-5" id="Features">
             <div class="row">
-                    <p class="d-flex justify-content-center" id="head">Features</p>
+                    <p class="d-flex justify-content-center animated-title" id="head">Features</p>
                 <div class="row">
                     <div class="col-12 col-md-12 col-lg-4 pt-5 mt-sm-3 mt-md-5 mt-lg-5 d-flex justify-content-center align-items-center">
-                        <img src="assets\IMG\Budget Clac.svg" alt="image not found" class="img-fluid">
+                        <img src="assets\IMG\Budget Clac.svg" alt="image not found" class="img-fluid appear">
                     </div>
                 
                     <div class="col-12 col-md-12 col-lg-8 my-3 ">
-                        <p id="bullet" class="d-flex justify-content-center align-items-center">Why BetControl Works</p> 
-                        <div class="d-none d-md-none d-lg-block">
+                        <p id="bullet" class="d-flex justify-content-center align-items-center animated-title">Why BetControl Works</p> 
+                        <div class="d-none d-md-none d-lg-block appear">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <p id="list"> <img src="assets\IMG\Question.svg" alt="" class="features-icon"> Self-assessment</p>
+                                    <p id="list"> <img src="assets\IMG\Question.svg" alt="" class="features-icon mx-2"> Self-assessment</p>
                                     <p id="content">Interactive quizzes help users evaluate their gambling habits and risk level. </p>
-                                    <p id="list"> <img src="assets\IMG\Calculator.svg" alt="" class="features-icon">Budget calculators & spending trackers</p>
+                                    <p id="list"> <img src="assets\IMG\Calculator.svg" alt="" class="features-icon mx-2">Budget calculators & spending trackers</p>
                                     <p id="content">Simple tools to set betting limits, track losses and wins, and monitor monthly gambling spend.</p>
-                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Personalized report cards</p>
+                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon mx-2"> Personalized report cards</p>
                                     <p id="content">Visual summaries showing betting patterns, win/loss ratios, and behavioral trends over time. </p>
                                 </div>
-                                <div class="col-lg-6">
-                                    <p id="list"> <img src="assets\IMG\Question.svg" alt="" class="features-icon"> Site & app blocking (self-exclusion)</p>
+                                <div class="col-lg-6 ">
+                                    <p id="list"> <img src="assets\IMG\Prohibit.svg" alt="" class="features-icon mx-2"> Site & app blocking (self-exclusion)</p>
                                     <p id="content"> Temporarily or permanently restricts access to all gambling platforms across devices.</p>
-                                    <p id="list"> <img src="assets\IMG\Calculator.svg" alt="" class="features-icon">Community support forums</p>
+                                    <p id="list"> <img src="assets\IMG\Community.svg" alt="" class="features-icon mx-2">Community support forums</p>
                                     <p id="content">Safe online spaces to share experiences, get advice, and connect with others facing similar challenges. </p>
-                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Tele-therapy sessions</p>
+                                    <p id="list"> <img src="assets\IMG\Phone.svg" alt="" class="features-icon mx-2"> Tele-therapy sessions</p>
                                     <p id="content">On-demand or scheduled sessions with licensed therapists trained in gambling addiction support.</p>
                                 </div>
                             </div>
@@ -212,7 +225,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <p id="list"> <img src="assets\IMG\Question.svg" alt="" class="features-icon"> Self-Assessment</p>
+                                    <p id="list"> <img src="assets\IMG\Question.svg" alt="" class="features-icon mx-2"> Self-Assessment</p>
                                 </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -224,7 +237,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <p id="list"> <img src="assets\IMG\Calculator.svg" alt="" class="features-icon"> Budget Calculator</p>
+                                    <p id="list"> <img src="assets\IMG\Calculator.svg" alt="" class="features-icon mx-2"> Budget Calculator</p>
                                 </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -236,7 +249,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Report Card</p>
+                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon mx-2"> Report Card</p>
                                 </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -248,7 +261,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Site & app blocking</p>
+                                    <p id="list"> <img src="assets\IMG\Prohibit.svg" alt="" class="features-icon mx-2"> Site & app blocking</p>
                                 </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -260,7 +273,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon"> Community support forums</p>
+                                    <p id="list"> <img src="assets\IMG\Community.svg" alt="" class="features-icon mx-2"> Community support forums</p>
                                 </button>
                                 </h2>
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
@@ -272,7 +285,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    <p id="list"> <img src="assets\IMG\Clipboard.svg" alt="" class="features-icon">Tele-therapy sessions</p>
+                                    <p id="list"> <img src="assets\IMG\Phone.svg" alt="" class="features-icon mx-2">Tele-therapy sessions</p>
                                 </button>
                                 </h2>
                                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
@@ -295,24 +308,24 @@
             <div class="row ">
                 <div class="justify-content-center d-flex ">
                     <div class="row">
-                        <div class="d-flex justify-content-center" id="head">How it Works</div>
-                        <div class="d-flex justify-content-center my-3" id="bullet">Take Control in 3 Simple Steps</div>
+                        <div class="d-flex justify-content-center animated-title" id="head">How it Works</div>
+                        <div class="d-flex justify-content-center my-3 animated-title" id="bullet">Take Control in 3 Simple Steps</div>
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center mt-5" style="gap: 1.5rem;" id="flexbox">
-                    <div class="col-12 col-md-12 col-lg-3 border shadow mx-3 my-3 p-4 position-relative" style="border-radius: 8px;" id="flexbox-1">
+                    <div class="col-12 col-md-12 col-lg-3 border shadow mx-3 my-3 p-4 position-relative appear" style="border-radius: 8px;" id="flexbox-1">
                         <p><img src="assets\IMG\Target.svg" alt=""></p>
                         <p class="point">Set Your Budget</p>
                         <p id="point">Decide how much you’re <br>willing to spend and set a daily <br> or weekly budget.</p>
                         <span class="watermark">1</span>
                     </div>
-                    <div class="col-12 col-md-12 col-lg-3 border shadow mx-3 my-3 p-4 position-relative" style="border-radius: 8px;" id="flexbox-2">
+                    <div class="col-12 col-md-12 col-lg-3 border shadow mx-3 my-3 p-4 position-relative appear" style="border-radius: 8px;" id="flexbox-2">
                         <p><img src="assets\IMG\ChartLine.svg" alt=""></p>
                         <p class="point">Track Your Spending</p>
                         <p id="point">Log your bets, wins, and <br> losses to stay on top of your <br> gambling habits.</p>
                         <span class="watermark">2</span>
                     </div>
-                    <div class="col-12 col-md-12 col-lg-3 border shadow mx-3 my-3 p-4 position-relative" style="border-radius: 8px;" id="flexbox-3">
+                    <div class="col-12 col-md-12 col-lg-3 border shadow mx-3 my-3 p-4 position-relative appear" style="border-radius: 8px;" id="flexbox-3">
                         <p><img src="assets\IMG\Article.svg" alt=""></p>
                         <p class="point">Get Insights</p>
                         <p id="point">Receive reports and insights <br> to improve your gambling <br> behavior.</p>
@@ -342,11 +355,11 @@
                         </div>
                         <div class="d-flex flex-column">
                             <div >
-                                <p class="profile-image"><img src="assets\IMG\Profile.svg" alt="profile-image"></p>
+                                <p class="profile-image appear"><img src="assets\IMG\Profile.svg" alt="profile-image"></p>
                             </div>
-                            <div>
-                                <p id="testimonial">“BetControl helped me track my gambling habits <br>and stay within my budget. Life-changing!”</p>
-                                <p class="text-capitalize mt-5 pt-3" id="name">Shaheed Ajoke</p>
+                            <div >
+                                <p class="appear" id="testimonial">“BetControl helped me track my gambling habits <br>and stay within my budget. Life-changing!”</p>
+                                <p class="text-capitalize mt-5 pt-3 appear" id="name">Shaheed Ajoke</p>
                             </div>
                         </div>
                         <div class="text-end " id="downedge">
@@ -364,40 +377,38 @@
         <div class="container my-5 pt-5 justify-content-center d-flex" id="FAQ" >
             <div class="row my-5">
                 <div class="row">
-                    <p class="d-flex justify-content-start" id="head">faq</p>
-                    <p class="d-flex justify-content-start" id="bullet">Frequently Asked Questions</p>
+                    <p class="d-flex justify-content-center" id="head">faq</p>
+                    <p class="d-flex justify-content-center" id="bullet">Frequently Asked Questions</p>
                 </div>
 
                 <div class="row my-5">
                     <div class="col-12 col-md-12 col-lg-6 d-flex flex-column gap-5 gx-5">
-                        <div class="card" id="faq-1">
+                        <div class="card appear" id="faq-1">
                             <p id="faq-bullet">Is BetControl Free To Use?</p>
                             <p id="faq-point">Yes! BetControl’s core features, including Budget <br> 
                                 Tracking and the Report Card, are completely free.</p>
                         </div>        
-                        <div class="card" id="faq-2">
-                            <p id="faq-bullet">Will BetControl stop me from <br>
-                                placing bets?</p>
-                            <p id="faq-point">No, but it provides insights and alerts to help you <br> bet more responsibly.</p>
+                        <div class="card appear" id="faq-2">
+                            <p id="faq-bullet">Will BetControl stop me from placing bets?</p>
+                            <p id="faq-point">Yes, BetControl blocks access to betting sites or apps during self-exclusion periods or when limits are reached, helping you stay in control.</p>
                         </div>
-                        <div class="card" id="faq-1">
-                            <p id="faq-bullet">How does BetControl help <br>
-                                me manage my gambling?</p>
-                            <p id="faq-point">BetControl helps you manage your gambling by <br>
+                        <div class="card appear" id="faq-1">
+                            <p id="faq-bullet">How does BetControl help me manage my gambling?</p>
+                            <p id="faq-point">BetControl helps you manage your gambling by
                                 offering tools to set budgets, track spending, and gain insights.</p>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-12 col-lg-6 d-flex flex-column gap-5 gx-5">
-                        <div class="card mt-5 mt-md-5 mt-lg-0 " id="faq-2">
-                            <p id="faq-bullet">Does BetControl work with all <br> betting platforms?</p>
+                        <div class="card appear mt-5 mt-md-5 mt-lg-0 " id="faq-2">
+                            <p id="faq-bullet">Does BetControl work with all betting platforms?</p>
                             <p id="faq-point">Yes! You can manually log your bets, no matter <br> where you place them.</p>
                         </div>
-                        <div class="card" id="faq-1">
-                            <p id="faq-bullet">How does the Budget Calculator <br> work?</p>
+                        <div class="card appear" id="faq-1">
+                            <p id="faq-bullet">How does the Budget Calculator work?</p>
                             <p id="faq-point">It helps you set limits on your spending and track <br> them, so you stay in control.</p>
                         </div>
-                        <div class="card" id="faq-2">
+                        <div class=" appear" id="faq-2">
                             <p id="faq-bullet">Is my data safe with BetControl?</p>
                             <p id="faq-point">Yes! We use encryption and never share your data <br>with third parties.</p>
                         </div>
@@ -413,36 +424,15 @@
         <div class="container d-flex justify-content-center align-items-center my-5 p-5 download">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12  d-flex flex-column my-auto ">
-                    <div class="my-2" ><p class="text-capitalize" id="bullet">ready to get started?</p></div>
-                    <div class="my-2" ><p id="download-point">Join thousands of users taking control of their gambling <br> habits today!</p></div>
-                    <div class="my-4" >
-                        <p>
-                            <!-- Button trigger modal -->
-                            <button type="button" class=" download-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="my-2 appear" ><p class="text-capitalize" id="bullet">ready to get started?</p></div>
+                    <div class="my-2 appear" ><p id="download-point">Join thousands of users taking control of their gambling <br> habits today!</p></div>
+                    <div class="my-4 appear">
+                        <button type="button" class="download-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Download App
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h2 class="modal-title" id="exampleModalLabel" style="color: #1A3B5D;">Coming Soon!</h2>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body" style="color: #1A3B5D;">
-                                            Exciting things are on the way—stay tuned for our app launch!  
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">understood</button>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </p>
+                        </button>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="col-lg-5 col-md-6 col-sm-12 appear">
                     <img src="assets\IMG\welcome.svg" alt="image not found" class="img-fluid ms-3" >
                 </div>
             </div>
@@ -459,9 +449,9 @@
             <div class="row " >
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <a href="index.html">
-                        <img class="img-fluid logo" src="assets\IMG\Logo(W).svg" width="75%" alt="logo not found">
+                        <img class="img-fluid logo appear" src="assets\IMG\Logo(W).svg" width="75%" alt="logo not found">
                     </a>
-                    <div class=" justify-content-center align-items-center flex-column">
+                    <div class=" justify-content-center align-items-center flex-column appear">
                         <div class="my-5 pe-5" style="font-size: 18px; font-weight:500;">
                             <p id="footer-title">Take Control Of Your Gambling Habits.</p>
                             <p class="" id="footer-point">Take control of your gambling habits with BetControl. <br> Track your wins, set budgets, and make smarter decisions.</p>
@@ -472,7 +462,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="row mt-4">
-                        <div class=" col-md-6 col-lg-6">
+                        <div class=" col-md-6 col-lg-6 appear">
                             <div class="mt-3" style="font-size: 20px; font-weight: bold; ">
                                 Quick Links:
                             </div>
@@ -486,9 +476,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class=" col-md-6 col-lg-6 ps-5">
+                        <div class=" col-md-6 col-lg-6 ps-5 appear">
                             <div class=" text text-capitalize mt-3 ">
-                            <p class="" style="font-size: 20px; font-weight: bold; "> follow us:</p>
+                            <p class=" " style="font-size: 20px; font-weight: bold; "> follow us:</p>
                             </div>
                             <div>
                                 <ul>
@@ -519,23 +509,32 @@
 </section>
 <!-- footer ends -->
 
+<!-- Modal for all download buttons -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel" style="color: #1A3B5D;">Coming Soon!</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="color: #1A3B5D;">
+                Exciting things are on the way—stay tuned for our app launch!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">understood</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- js here -->
 
  <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
 crossorigin="anonymous"></script>
-<!-- offcanvas reset -->
-<script>
-    // Add an event listener to the offcanvas element
-    document.addEventListener('hidden.bs.offcanvas', function () {
-        const scrollPosition = window.scrollY;
-        setTimeout(() => {
-            window.scrollTo(0, scrollPosition);
-        }, 0);
-    });
-</script>
-<!-- js ends -->
+<!-- js file link -->
+<script src="JAVASCRIPT\script.js"></script>
 
 </body>
 </html>
