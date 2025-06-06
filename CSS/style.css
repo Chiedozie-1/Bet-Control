@@ -11,8 +11,8 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 36px;
-  height: 36px;
+  width: 0px;
+  height: 0px;
   border-radius: 50%;
   background: rgba(26, 59, 93, 0.10);
   border: 2px solid #1A3B5D;
