@@ -57,10 +57,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // cursor
-const cursor = document.querySelector('.cursor');
 document.addEventListener('DOMContentLoaded', () => {
   const cursor = document.querySelector('.cursor');
+  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+  let currentX = mouseX, currentY = mouseY;
+
   document.addEventListener('mousemove', e => {
-    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.opacity = 1;
   });
+
+  // Hide cursor on mouse leave
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = 0;
+  });
+  document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = 1;
+  });
+
+  function animate() {
+    // The 0.18 controls the "lag" (lower = more lag)
+    currentX += (mouseX - currentX) * 0.18;
+    currentY += (mouseY - currentY) * 0.18;
+    cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animate);
+  }
+  animate();
 });

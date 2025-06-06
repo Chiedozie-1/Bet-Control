@@ -1,0 +1,29 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.result-box {
+    z-index: 11; 
+    color: var(--text-color); 
+    cursor:pointer; 
+    width:350px; 
+    background-color: var(--card-bg-color);
+}
+@media screen and (max-width: 768px) {
+    .result-box{
+        width: 90px;
+    }
+    
+}
+
+.result-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.result-box ul li:hover{
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+}

@@ -7,30 +7,34 @@
 html {
     scroll-behavior: smooth;
 }
-.cursor{
-    z-index: 999;
-    position: fixed;
-    background: #0F2A45;
-    background: linear-gradient(90deg, rgba(15, 42, 69, 1) 27%, rgba(26, 59, 93, 1) 66%, rgba(26, 73, 120, 1) 100%);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: 0 0 30px #1A3B5D,
-                0 0 70px #1A3B5D,
-                0 0 110px #1A3B5D;
-    animation: colors 3s infinite alternate;
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(26, 59, 93, 0.12); /* soft blue, transparent */
+  box-shadow: 0 4px 32px 0 rgba(26,59,93,0.10);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s, width 0.2s, height 0.2s;
+  will-change: transform;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(2px);
+  animation: colors 3s infinite alternate;
 }
 
 @keyframes colors {
     0% {
-        background: #0F2A45;
+        background: #5e92c6;
     }
     50% {
-        background: #1A4978;
+        background: #6b839c;
     }
     100% {
-        background: #1A3B5D;
+        background: #708daa;
     }
 }
 
@@ -470,4 +474,11 @@ button:active {
 .appear.visible {
   opacity: 1;
   transform: scale(1);
+}
+
+@media (max-width: 767.98px) {
+  .logo-side-vh {
+    height: 10vh !important;
+    text-align: center !important;
+  }
 }
