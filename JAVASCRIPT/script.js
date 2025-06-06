@@ -62,26 +62,52 @@ document.addEventListener('DOMContentLoaded', () => {
   let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
   let currentX = mouseX, currentY = mouseY;
 
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.opacity = 1;
-  });
-
-  // Hide cursor on mouse leave
-  document.addEventListener('mouseleave', () => {
-    cursor.style.opacity = 0;
-  });
-  document.addEventListener('mouseenter', () => {
-    cursor.style.opacity = 1;
-  });
-
+  // Smooth trailing
   function animate() {
-    // The 0.18 controls the "lag" (lower = more lag)
     currentX += (mouseX - currentX) * 0.18;
     currentY += (mouseY - currentY) * 0.18;
     cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
     requestAnimationFrame(animate);
   }
   animate();
+
+  // Move cursor
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.opacity = 1;
+
+    // Detect hover on interactive elements
+    const elem = document.elementFromPoint(e.clientX, e.clientY);
+  if (
+  elem &&
+  (
+    elem.tagName === 'A' ||
+    elem.tagName === 'BUTTON' ||
+    elem.classList.contains('btn') ||
+    elem.onclick ||
+    elem.closest('p, span, h1, h2, h3, h4, h5, h6, label, li')
+  )
+) {
+  cursor.classList.add('cursor-hover');
+} else {
+  cursor.classList.remove('cursor-hover');
+}
+  });
+
+  // Pulse on click
+  document.addEventListener('mousedown', () => {
+    cursor.classList.add('cursor-click');
+  });
+  document.addEventListener('mouseup', () => {
+    cursor.classList.remove('cursor-click');
+  });
+
+  // Hide/show on leave/enter
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = 0;
+  });
+  document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = 1;
+  });
 });
